@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Cheap Food in the Eug</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+    
+    <h1
+        style="text-align:center;" + style="font-size:8vw;" + style="font-family:verdana;" + > Cheap Food in the Eug </h1>
+    <style>
+		#main_map { 
+			height: 85vh; 
+            width: 85vw;
+		}
+        body {
+            background-color: white;
+        }
+        h1 {
+            color: dimgrey;
+            font-size: 24px;
+        }
+        #p1 {
+            text-align: center;
+            color: dimgrey;
+            font-size: 16px;
+        }
+	</style>
+
+</head>
+
+<body>
+      <p id="p1" > <b> For students, by students. </b></p>
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div style="background-color:rgb(218, 216, 216)" id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                   
+                </li>
+                <li>
+                    <a  style="color: dimgrey" href="index.html">Home</a>
+                </li>
+              
+                <li>
+                    <a style="color: dimgrey" href="Aboutpage.html">About</a>
+                </li>
+                <li>
+                    <a style="color: dimgrey" href="Featuredpage.html">Featured</a>
+                </li>
+                <li>
+                    <a style="color: dimgrey" href="Contactpage.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                
+                <a href="#menu-toggle" class="btn btn-secondary" id="menu-toggle" >Menu</a>
+                <iframe id="main_map" src="cheapfoodmap.html" width=100%></iframe> 
+               
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Menu Toggle Script -->
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
+    
+    <script>
+    $("#filterButton").click(function(e) {
+        e.preventDefault();
+        console.log('test filter button', test)
+    });
+    </script>
+    
+</body>
+</html>

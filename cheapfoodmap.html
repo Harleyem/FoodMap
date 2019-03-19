@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+
+<html>
+   <head>
+      <meta charset=utf-8 />
+      <title> 
+          content = <h1> Cheap Food in the Eug </h1>
+          <p> For students, by students. 
+          </p>
+      </title>
+      <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+      <script src='https://api.mapbox.com/mapbox.js/v2.4.0/mapbox.js'></script>
+      <link href='https://api.mapbox.com/mapbox.js/v2.4.0/mapbox.css' rel='stylesheet' />
+        <script src="food6.geojson"></script>
+        <script src="https://code.jquery.com/jquery-latest.js"></script>
+      <style>
+         body { margin:0; padding:0; }
+         #mymap { position:absolute; top:0; bottom:0; width:100%; }
+          .myBtnContainer {
+              position: fixed;
+              z-index: 9999;
+          }
+      </style>
+   </head>
+   <body>
+    <!--<div height="100%" display="flex" flex-direction="column">	-->    
+    <div id="mymap"></div>
+
+    <form id="categoryFilterForm" class ="myBtnContainer" method="get"
+             style="background-color: whitesmoke; opacity: 0.82; padding-bottom:10px; font-family: tahoma;">
+        
+    <p1
+    style="font-family: Tahoma;"> <b> Select categories to <br>filter restaurants </b> <br>  </p1>
+    
+    <!-- Create checkboxes connected to categories in JSON -->
+    <!-- Make sure to name the inputs correctly i.e. by their category name in your JSON file -->
+        <input type="checkbox" name="quick-meal" value=''> Quick meal<br>
+        <input type="checkbox" name="sit-down" value=''> Sit-down<br>
+        <input type="checkbox" name="cafe" value=''> Cafe<br>
+        <input type="checkbox" name="food-truck" value=''> Food Truck<br>
+        <input type="checkbox" name="bar" value=''> Bar<br>
+     
+    
+    </form>
+       <br> <br> <br> <br> <br> <br> <br>
+    <form id="typeFilterForm" class ="myBtnContainer" method="get" 
+          style="background-color: whitesmoke; opacity: 0.9; padding-bottom: 5px; font-family: tahoma;">
+        <p2> <b> Select types of food </b> <br> </p2>
+        <!-- Make sure to name the inputs correctly i.e. by their category name in your JSON file -->
+        <!-- Create checkboxes connected to food types in JSON -->
+            <input type="checkbox" name="breakfast" value=''> Breakfast<br>
+            <input type="checkbox" name="soup-salad" value=''> Soup/salad<br>
+            <input type="checkbox" name="bowls" value=''> Bowls<br>
+            <input type="checkbox" name="sandwiches-wraps" value=''> Sandwiches/wraps<br>
+            <input type="checkbox" name="latin-american" value=''> Latin American<br>
+            <input type="checkbox" name="rice" value=''> Rice<br>
+            <input type="checkbox" name="american" value=''> American<br>
+            <input type="checkbox" name="sushi" value=''> Sushi<br>
+            <input type="checkbox" name="pizza" value=''> Pizza<br>
+            <input type="button" id="submitFormData" style="font-family: Tahoma;"  onclick="SubmitFormData();" value="Submit"
+                  style="background-color: darkgrey"/>
+       
+        
+    </form>
+       
+<script>
+    var markersLayer = new L.LayerGroup(); // NOTE: Layer is created here!
+    var map = L.map('mymap', { zoomControl: false }).setView([44.04648, -123.080778], 15);
+    new L.Control.Zoom({ position: 'topright' }).addTo(map);
+   
+    L.tileLayer(
+        'https://api.mapbox.com/styles/v1/{usr}/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', 
+        {
+            // set your mapbox info here
+            usr : 'harleyemery',
+            id : 'cjn6xxcl21pot2rmmq3d9c1gn',
+            accessToken : 'pk.eyJ1IjoiaGFybGV5ZW1lcnkiLCJhIjoiY2puNnh2cGNyMHhmaDNrbGQxcDV4bXdubyJ9.BhjBZ1urFlCWDIPt30uGIA',
+            tileSize: 512,
+            zoomOffset: -1
+        }).addTo(map);
+        
+    function highlightFeature(e) {
+    var layer = e.target;    
+    
+    }
+     
+    function SubmitFormData() { 
+        //submit checked values in form
+
+        //console.log('FORM SUBMITTED...');
+        //const formValues = document.querySelector('#categoryFilterForm')
+        // get category form data
+        let categoryFormValues = $('#categoryFilterForm').serialize();
+        
+        // parse the data into an array
+        categoryFormValues = categoryFormValues.replace('&', '');
+        categoryFormValues = categoryFormValues.split('=');
+        categoryFormValues.pop();
+        //console.log(categoryFormValues);
+        
+        // get type form values
+        let typeFormValues = $('#typeFilterForm').serialize();
+        
+        // parse the data into an array
+        console.log(typeFormValues);
+        typeFormValues = typeFormValues.replace(/&/g, '');
+        console.log(typeFormValues);
+        typeFormValues = typeFormValues.split('=');
+        typeFormValues.pop();
+        
+        //console.log(typeFormValues)
+        
+        // render map with all filters
+        renderMapWithFilters(categoryFormValues, typeFormValues);
+    }
+    
+    function renderMapWithFilters(categoryFilter=[], typeFilter=[]) {
+        markersLayer.clearLayers();
+    
+    var filteredPoints = FoodMap.features
+        // remove anything that does not pass the category filter test
+        .filter( (feature) => (categoryFilter.length === 0 || categoryFilter.includes(feature.properties.category)))
+        // remove anything that does not pass the type filter test
+        .filter( (feature) => {
+            const types = feature.properties.type.split(",")
+            for (let i =0; i < types.length; i++) {
+                if (typeFilter.length === 0 || typeFilter.includes(types[i])) {
+                    return true
+                }
+            }
+            return false // if we looped through all of the types and didn't find any matches
+        })
+    console.log('Filtered Points: ', categoryFilter, typeFilter)
+        
+    // call the functions to render mymap using the filter created from the values above
+    var FoodPoints = L.geoJson(filteredPoints, {
+            onEachFeature: function (feature, layer) {
+                layer.on;
+                //console.log(feature.properties);
+                    
+                content = "<b>Name: </b>" + feature.properties.name + "<b> <br>Cost: </b>" + feature.properties.cost + "<b> <br>Category: </b>" + feature.properties.category + "<b> <br>Items: </b>" + feature.properties.items;
+                layer.bindPopup(content);
+                markersLayer.addLayer(layer); 
+            }
+        })
+    
+    markersLayer.addTo(map);
+    }
+    renderMapWithFilters()
+
+</script>
+<style>
+    body { margin:0; padding:0; }
+    #mymap { position:absolute; top:0; bottom:0; width:100%; }
+     .myBtnContainer {
+         position: fixed;
+         z-index: 9999;
+     }
+</style>
+</body>
+</html> 

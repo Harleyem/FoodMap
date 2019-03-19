@@ -1,0 +1,672 @@
+var FoodMap =
+{
+   "type": "FeatureCollection",
+   "features": [
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -123.07383,44.044883 ]
+    },
+    "properties": {
+    "name":"Fresh Marketcafe",
+    "category":"quick-meal",
+    "items":"bowls",
+    "cost":5,
+    "special days":"",
+    "special times":"",
+    "type":"bowls, noodles",
+    "Special deals":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -123.070514,44.039071 ]
+    },
+    "properties": {
+    "name":"Agate Alley",
+    "category":"sit-down",
+    "items":"tacos, fries, tots",
+    "cost":4.5,
+    "special days":"Tuesdays",
+    "special times":"",
+    "type":"latin-american",
+    "Special deals":"taco tuesday and happy hour"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -123.080383,44.045063 ]
+    },
+    "properties": {
+    "name":"The Glenwood",
+    "category":"sit-down",
+    "items":"soup",
+    "cost":4.75,
+    "special days":"",
+    "special times":"",
+    "type":"soup/salad",
+    "Special deals":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -123.080837,44.044265 ]
+    },
+    "properties": {
+    "name":"Fathom's Bar",
+    "category":"bar",
+    "items":"pizza",
+    "cost":2,
+    "special days":"",
+    "special times":"22:00-2:00",
+    "type":"pizza",
+    "Special deals":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -123.070081,44.039288 ]
+    },
+    "properties": {
+    "name":"McMenamin's",
+    "category":"sit-down",
+    "items":"pizza, fries",
+    "cost":4.75,
+    "special days":"",
+    "special times":"1500-1800, 2200-1000",
+    "type":"american, pizza",
+    "Special deals":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -123.079308,44.045674 ]
+    },
+    "properties": {
+    "name":"Caspian",
+    "category":"quick-meal",
+    "items":"breakfast pita, zatar bread, fries, soup, salad, asstd. side dishes",
+    "cost":3.95,
+    "special days":"",
+    "special times":"",
+    "type":"breakfast, soup/salad",
+    "Special deals":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -123.079298,44.045389 ]
+    },
+    "properties": {
+    "name":"Milky Way",
+    "category":"cafe",
+    "items":"bagel sandwiches",
+    "cost":2,
+    "special days":"",
+    "special times":"",
+    "type":"breakfast",
+    "Special deals":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -123.084541,44.049642 ]
+    },
+    "properties": {
+    "name":"Burrito Boy",
+    "category":"quick-meal",
+    "items":"tacos, burritos",
+    "cost":4.25,
+    "special days":"",
+    "special times":"",
+    "type":"latin american",
+    "Special deals":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -123.078842,44.046361 ]
+    },
+    "properties": {
+    "name":"Rennie's Landing ",
+    "category":"sit-down",
+    "items":"chips and salsa, bean dip, soup",
+    "cost":4,
+    "special days":"",
+    "special times":"",
+    "type":"american",
+    "Special deals":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -123.082383,44.045072 ]
+    },
+    "properties": {
+    "name":"Tasty Thai Campus",
+    "category":"quick-meal",
+    "items":"spring rolls, fried tofu, dumplings, rice",
+    "cost":4.95,
+    "special days":"",
+    "special times":"",
+    "type":"rice",
+    "Special deals":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -123.092583,44.051138 ]
+    },
+    "properties": {
+    "name":"Sushi Ya",
+    "category":"sit-down",
+    "items":"norimaki rolls, salad, miso soup",
+    "cost":5,
+    "special days":"",
+    "special times":"20% discount 3-6pm M-F",
+    "type":"sushi",
+    "Special deals":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -123.089509,44.049526 ]
+    },
+    "properties": {
+    "name":"Mezza Luna Pizza",
+    "category":"sit-down",
+    "items":"pizza slice, garlic bread knots",
+    "cost":4,
+    "special days":"",
+    "special times":"",
+    "type":"pizza",
+    "Special deals":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -123.087584,44.047931 ]
+    },
+    "properties": {
+    "name":"Cheba Hut",
+    "category":"quick-meal",
+    "items":"nug sandwich, munchies",
+    "cost":4.95,
+    "special days":"",
+    "special times":"",
+    "type":"sandwiches-wraps",
+    "Special deals":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -123.082022,44.033336 ]
+    },
+    "properties": {
+    "name":"Ume Grill Unigiri House",
+    "category":"quick-meal",
+    "items":"Onigiri and pot stickers",
+    "cost":4,
+    "special days":"",
+    "special times":"",
+    "type":"rice",
+    "Special deals":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -123.078595,44.04554 ]
+    },
+    "properties": {
+    "name":"Uly's Taco Truck",
+    "category":"food-truck",
+    "items":"tacos",
+    "cost":2.5,
+    "special days":"",
+    "special times":"open 10:30pm-3am Th-Sat",
+    "type":"latin american",
+    "Special deals":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -123.112329,44.051786 ]
+    },
+    "properties": {
+    "name":"Cornbread Cafe",
+    "category":"sit-down",
+    "items":"1/2 order of biscuits&gravy and sides",
+    "cost":null,
+    "special days":"",
+    "special times":"",
+    "type":"breakfast",
+    "Special deals":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -123.090125,44.043004 ]
+    },
+    "properties": {
+    "name":"Toshi's Ramen",
+    "category":"quick-meal",
+    "items":"basic soups",
+    "cost":5,
+    "special days":"",
+    "special times":"",
+    "type":"soup/salad",
+    "Special deals":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -123.092528,44.049701 ]
+    },
+    "properties": {
+    "name":"Wrap City *",
+    "category":"food-truck",
+    "items":"value bowls",
+    "cost":5,
+    "special days":"",
+    "special times":"open 11am-2pm",
+    "type":"bowls",
+    "Special deals":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -123.08002,44.046415 ]
+    },
+    "properties": {
+    "name":"SY's New York Pizza",
+    "category":"quick-meal",
+    "items":"pizza slice ",
+    "cost":2.75,
+    "special days":"",
+    "special times":"",
+    "type":"pizza",
+    "Special deals":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -123.092474,44.046787 ]
+    },
+    "properties": {
+    "name":"Viva Vegetarian grill",
+    "category":"food-truck",
+    "items":"hotdogs and fries",
+    "cost":5,
+    "special days":"",
+    "special times":"open 11am-5pm",
+    "type":"american",
+    "Special deals":"50 cents off with a student id or if it is raining"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -123.091196,44.030666 ]
+    },
+    "properties": {
+    "name":"El Super Burrito",
+    "category":"quick-meal",
+    "items":"tacos",
+    "cost":2,
+    "special days":"",
+    "special times":"",
+    "type":"latin american",
+    "Special deals":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -123.078612,44.045486 ]
+    },
+    "properties": {
+    "name":"Cart de Frisco",
+    "category":"food-truck",
+    "items":"skewers",
+    "cost":5,
+    "special days":"",
+    "special times":"open 11am-3pm M-F",
+    "type":"other",
+    "Special deals":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -123.092882,44.049795 ]
+    },
+    "properties": {
+    "name":"Sizzle Pie",
+    "category":"quick-meal",
+    "items":"garlic knots",
+    "cost":4,
+    "special days":"",
+    "special times":"",
+    "type":"pizza",
+    "Special deals":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -123.093337,44.049828 ]
+    },
+    "properties": {
+    "name":"Killer Burger",
+    "category":"quick-meal",
+    "items":"14oz fries",
+    "cost":3.5,
+    "special days":"",
+    "special times":"",
+    "type":"american",
+    "Special deals":""
+    }
+  },
+    {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -123.092069,44.049523 ]
+    },
+    "properties": {
+    "name":"Sushi Seoul",
+    "category":"sit-down",
+    "items":"sides",
+    "cost":5,
+    "special days":"",
+    "special times":"",
+    "type":"sushi",
+    "Special deals":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -123.092954,44.04964 ]
+    },
+    "properties": {
+    "name":"The Barn Light",
+    "category":"sit-down",
+    "items":"biscuits&gravy, brussel prouts, pretzel bites, tots, house salad",
+    "cost":5,
+    "special days":"",
+    "special times":"",
+    "type":"breakfast, other, soup/salad",
+    "Special deals":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -123.082835,44.045264 ]
+    },
+    "properties": {
+    "name":"Taqueria El Pato Verde",
+    "category":"quick-meal",
+    "items":"vegetarian burritos, tacos, tostadas, and quesadillas",
+    "cost":4.95,
+    "special days":"",
+    "special times":"",
+    "type":"latin american",
+    "Special deals":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -123.089865,44.050042 ]
+    },
+    "properties": {
+    "name":"541 Sushi",
+    "category":"quick-meal",
+    "items":"appetizers, gunkan, nigiri",
+    "cost":5,
+    "special days":"",
+    "special times":"",
+    "type":"sushi",
+    "Special deals":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -123.089445,44.044599 ]
+    },
+    "properties": {
+    "name":"Vero Espresso House",
+    "category":"cafe",
+    "items":"bagel w/cream cheese, open-faced bagel w/cream cheese and tomato",
+    "cost":4.25,
+    "special days":"",
+    "special times":"",
+    "type":"breakfast",
+    "Special deals":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -123.092981,44.049029 ]
+    },
+    "properties": {
+    "name":"Poppi's Anatoli",
+    "category":"sit-down",
+    "items":"soup hemeras, dinner salad",
+    "cost":4.95,
+    "special days":"",
+    "special times":"",
+    "type":"soup/salad",
+    "Special deals":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -123.080039,44.046358 ]
+    },
+    "properties": {
+    "name":"Sweet Basil Express",
+    "category":"sit-down",
+    "items":"apps, soups, sides",
+    "cost":4.75,
+    "special days":"",
+    "special times":"prices from lunch menu (M-F 11am-4pm)",
+    "type":"soup/salad, other",
+    "Special deals":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -123.080017,44.045866 ]
+    },
+    "properties": {
+    "name":"Maple Garden",
+    "category":"quick-meal",
+    "items":"sides of rice",
+    "cost":4.5,
+    "special days":"",
+    "special times":"",
+    "type":"rice",
+    "Special deals":""
+    }
+  },
+
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -123.092855,44.050753 ]
+    },
+    "properties": {
+    "name":"Bagel Sphere",
+    "category":"cafe",
+    "items":"bagels",
+    "cost":2,
+    "special days":"",
+    "special times":"",
+    "type":"breakfast",
+    "Special deals":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -123.081434,44.045396 ]
+    },
+    "properties": {
+    "name":"Duck Sushi",
+    "category":"sit-down",
+    "items":"sushi rolls, dumplings, salads",
+    "cost":3.5,
+    "special days":"",
+    "special times":"",
+    "type":"sushi",
+    "Special deals":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -123.09413,44.049583 ]
+    },
+    "properties": {
+    "name":"Dos Banderas",
+    "category":"food-truck",
+    "items":"tacos, burrito, rice",
+    "cost":2.5,
+    "special days":"",
+    "special times":"",
+    "type":"latin american",
+    "Special deals":""
+    }
+  },
+
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -123.092855,44.050753 ]
+    },
+    "properties": {
+    "name":"Bagel Sphere",
+    "category":"cafe",
+    "items":"bagels",
+    "cost":2,
+    "special days":"",
+    "special times":"",
+    "type":"breakfast",
+    "Special deals":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -123.081434,44.045396 ]
+    },
+    "properties": {
+    "name":"Duck Sushi",
+    "category":"sit-down",
+    "items":"sushi rolls, dumplings, salads",
+    "cost":3.5,
+    "special days":"",
+    "special times":"",
+    "type":"sushi",
+    "Special deals":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -123.09413,44.049583 ]
+    },
+    "properties": {
+    "name":"Dos Banderas",
+    "category":"food-truck",
+    "items":"tacos, burrito, rice",
+    "cost":2.5,
+    "special days":"",
+    "special times":"",
+    "type":"latin american",
+    "Special deals":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -123.10691,44.052857 ]
+    },
+    "properties": {
+    "name":"Mi Tierra",
+    "category":"sit-down",
+    "items":"tacos, enchiladas, breakfast burritos, tamales, tostadas",
+    "cost":2,
+    "special days":"",
+    "special times":"",
+    "type":"latin american",
+    "Special deals":""
+    }
+  },
+
+]
+}
